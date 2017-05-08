@@ -1,4 +1,4 @@
-package com.zhaoh.com.utilslibs.utils;
+package com.vic.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -49,5 +49,16 @@ public class CheckUtils {
         Pattern p = Pattern.compile(regEx);
         Matcher m = p.matcher(name);
         return m.matches();
+    }
+
+    /**
+     * 验证身份证号是否合法
+     *
+     * @param identityNo
+     * @return
+     */
+    public static boolean checkIdentityNo(String identityNo) {
+        return identityNo == null || "".equals(identityNo) ? false : Pattern
+                .matches("(^\\d{15}$)|(\\d{17}(?:\\d|x|X)$)", identityNo);
     }
 }
