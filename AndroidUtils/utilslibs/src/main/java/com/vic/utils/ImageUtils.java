@@ -21,7 +21,7 @@ public class ImageUtils {
         if (degree != 0) {//旋转照片角度，防止头像横着显示
             bm = rotateBitmap(bm, degree);
         }
-        File outputFile = new File(targetPath);
+        File outputFile = new File( targetPath);
         try {
             if (!outputFile.exists()) {
                 outputFile.getParentFile().mkdirs();
