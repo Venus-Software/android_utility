@@ -1,4 +1,4 @@
-package com.zhaoh.com.utilslibs.utils;
+package com.vic.utils;
 
 import android.content.Context;
 
